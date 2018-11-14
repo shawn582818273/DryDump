@@ -1,0 +1,7 @@
+\\mac\home\documents\visual studio 2015\Projects\DryDump\DryDump\bin\Debug\DryDump.dll
+\\mac\home\documents\visual studio 2015\Projects\DryDump\DryDump\bin\Debug\DryDump.pdb
+\\mac\home\documents\visual studio 2015\Projects\DryDump\DryDump\bin\Debug\ActUtlTypeLib.dll
+\\mac\home\documents\visual studio 2015\Projects\DryDump\DryDump\bin\Debug\MySql.Data.dll
+\\mac\home\documents\visual studio 2015\Projects\DryDump\DryDump\obj\Debug\DryDump.dll
+\\mac\home\documents\visual studio 2015\Projects\DryDump\DryDump\obj\Debug\DryDump.pdb
+\\Mac\Home\Documents\Visual Studio 2015\Projects\DryDump\DryDump\obj\Debug\DryDump.csprojResolveAssemblyReference.cache
