@@ -46,7 +46,7 @@ namespace DryDump
         ///<param name="port">发送邮件所用的端口号（htmp协议默认为25）</param>
         ///<param name="sslEnable">true表示对邮件内容进行socket层加密传输，false表示不加密</param>
         ///<param name="pwdCheckEnable">true表示对发件人邮箱进行密码验证，false表示不对发件人邮箱进行密码验证</param>
-        public bool SendMail(string SenderServer, string toMail, string fromMail, string subject, string emailBody, string username, string password, string port, string attachmentsPath, bool sslEnable, bool pwdCheckEnable)
+        public bool SendMail(string SenderServer, string toMail,string CC,string BCC, string fromMail, string subject, string emailBody, string username, string password, string port, string attachmentsPath, bool sslEnable, bool pwdCheckEnable)
         {
             try
             {
@@ -55,12 +55,14 @@ namespace DryDump
                 SmtpClient mSmtpClient; //主要处理用smtp方式发送此邮件的配置信息（如：邮件服务器、发送端口号、验证方式等等）
                 int mSenderPort;   //发送邮件所用的端口号（htmp协议默认为25）
                 string mSenderServerHost;    //发件箱的邮件服务器地址（IP形式或字符串形式均可）
-                string mSenderPassword;    //发件箱的密码
+                string mSenderPassword;    //发件箱的密码或授权码
                 string mSenderUsername;   //发件箱的用户名（即@符号前面的字符串，例如：hello@163.com，用户名为：hello）
                 bool mEnableSsl;    //是否对邮件内容进行socket层加密传输
                 bool mEnablePwdAuthentication;  //是否对发件人邮箱进行密码验证
                 mMailMessage = new MailMessage();
                 mMailMessage.To.Add(toMail);
+                mMailMessage.CC.Add(CC);
+                mMailMessage.Bcc.Add(BCC);
                 mMailMessage.From = new MailAddress(fromMail);
                 mMailMessage.Subject = subject;
                 mMailMessage.Body = emailBody;
